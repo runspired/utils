@@ -1,0 +1,34 @@
+{
+    "name": "runspired-utils",
+    "version": "0.1.1",
+    "description": "Utility functions for the modern web.",
+    "main": "./lib/utils.js",
+    "keywords": [
+        "utility",
+        "array",
+        "string",
+        "function"
+    ],
+    "authors": [{
+        "name": "Chris Thoburn",
+        "email": "runspired@gmail.com",
+        "homepage": "http://runspired.com"
+    }],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/runspired/utils.git"
+    },
+    "license": "MIT",
+    "ignore" : [
+        "node_modules",
+        "tests",
+        ".gitignore",
+        ".npmignore",
+        "package.json",
+        "Gruntfile.js"
+    ],
+    "files": [
+        "./lib/utils.js",
+        "LICENSE"
+    ]
+}
