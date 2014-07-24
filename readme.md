@@ -16,4 +16,4 @@ consumption.
 
 ##License
 
-This package carries the [UNLICENSE](http://unlicense.org/) license.
+This package carries the MIT license.
