@@ -1,6 +1,6 @@
 {
     "name": "runspired-utils",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Utility functions for the modern web.",
     "main": "./lib/utils.js",
     "keywords": [
