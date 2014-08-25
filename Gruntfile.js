@@ -26,75 +26,10 @@ module.exports = function (grunt) {
                 pushTo: 'upstream',
                 gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
             }
-        },
-
-        clean: {
-            dist: {
-                files: [{
-                    dot: true,
-                    src: [
-                        '.tmp',
-                        'dist/<%= pkg.version %>/*',
-                        '!dist/.git*'
-                    ]
-                }]
-            },
-            app : '.tmp'
-        },
-
-        uglify: {
-            dist : {
-                options: {
-                    mangle: true,
-                    compress: true
-                },
-                files: {}
-            },
-            app : {
-                options: {
-                    mangle: false,
-                    compress: false
-                },
-                files: {}
-            }
-        },
-
-        concurrent: {
-            options: {
-                limit: 8
-            },
-            dist : {}
-        },
-
-        neuter: {
-            options: {
-                basePath : 'lib'
-            },
-            dist: {
-                src: 'lib/utils.js',
-                dest: 'dist/<%= pkg.version %>.utils.js'
-            },
-
-            app: {
-                src: 'lib/utils.js',
-                dest: 'dist/<%= pkg.version %>.utils.js'
-            }
         }
     });
 
 
-    grunt.registerTask('test', [
-        'clean:test',
-        'concurrent:test',
-        'clean:tesst'
-    ]);
-
-
-    grunt.registerTask('build', [
-        'clean:dist',
-        'concurrent:dist',
-        'uglify:dist'
-    ]);
 
     /*
      Generate a Release (also creates a build);
@@ -118,9 +53,6 @@ module.exports = function (grunt) {
             }
 
             grunt.task.run([
-                'clean:dist',
-                'concurrent:dist',
-                'uglify:dist',
                 'bump-commit'
             ]);
 
